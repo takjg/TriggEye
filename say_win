@@ -1,0 +1,5 @@
+#!/bin/bash -eu
+voice=\\\\wsl\$\\Ubuntu\\home\\$USER\\TriggEye\\$1
+/mnt/c/Program\ Files/Windows\ Media\ Player/wmplayer.exe $voice &
+sleep 2
+/mnt/c/Windows/System32/taskkill.exe /IM wmplayer.exe
