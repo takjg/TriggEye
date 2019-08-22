@@ -1,0 +1,53 @@
+#!/bin/bash -eu
+
+# Copyright (c) 2019 Tak Jaga
+# Released under the Apache License, Version 2.0
+# https://github.com/takjg/TriggEye/blob/master/LICENSE
+
+device=0     # -d <id> ........... camera ID
+width=1920   # -w <pixels> ....... camera width
+height=1080  # -h <pixels> ....... camera height
+interval=1.0 # -i <seconds> ...... minimum trigger interval
+margin=150   # -m <millimeters> .. margin for error
+
+while getopts i:m:d:w:h: OPT; do
+    case $OPT in
+        d)   device=$OPTARG ;;
+        w)    width=$OPTARG ;;
+        h)   height=$OPTARG ;;
+        i) interval=$OPTARG ;;
+        m)   margin=$OPTARG ;;
+       \?) echo "Usage: $0 [options] command_to_be_executed" 1>&2 ; exit 1 ;;
+    esac
+done
+shift $((OPTIND - 1))
+
+trap 'kill $(jobs -p)' EXIT
+
+cmd=$* # command to be executed when triggered
+csv=feature.csv # path to output CSV of FeatureExtraction
+rm -f $csv
+touch $csv
+
+openface=OpenFace_*.*.*_win_*/FeatureExtraction.exe
+test -x $openface ||
+openface=OpenFace-OpenFace_*.*.*/build/bin/FeatureExtraction
+
+dir=$PWD
+pushd $(dirname $openface)
+./$(basename $openface) \
+    -device $device \
+    -cam_width $width \
+    -cam_height $height \
+    -gaze \
+    -3Dfp \
+    -of $csv \
+    -out_dir $dir &
+popd
+
+tail -f $csv |
+python3 detect.py $interval $margin |
+while read line; do
+    echo $line
+    $cmd &
+done
