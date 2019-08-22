@@ -44,7 +44,7 @@ When failed:
   ```
   ./triggeye -d 3 echo OK
   ```
-- Use the option `-w` and `-h` to specify the width and height of the webcam resolution:
+- Use the options `-w` and `-h` to specify the width and height of the webcam resolution:
   ```
   .triggeye -w 640 -h 480 echo OK
   ```
@@ -74,6 +74,8 @@ When failed:
   ```
 - Linux
   - See [How to play audio files on the command line](https://scrapbox.io/smart-home/%E9%9F%B3%E5%A3%B0%E3%81%AE%E5%86%8D%E7%94%9F%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89)
+
+The sample audio files [ok_google.wav](https://raw.githubusercontent.com/takjg/TriggEye/master/ok_google.wav) and [alexa.wav](https://raw.githubusercontent.com/takjg/TriggEye/master/alexa.wav) were created by [Open JTalk](http://open-jtalk.sp.nitech.ac.jp/index.php).
 
 ## Mechanism and implementation
 
