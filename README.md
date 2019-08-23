@@ -9,7 +9,7 @@ When looking at the webcam, [TriggEye](https://github.com/takjg/TriggEye) execut
 
 ## Features
 
-- High Performance: Detects gaze 3 meters ahead in 0.33 seconds. ([Performance of TriggEye](https://scrapbox.io/smart-home/TriggEye%E3%81%AE%E6%80%A7%E8%83%BD%E8%A9%95%E4%BE%A1))
+- High Performance: Detects gaze wherever you are in the room. ([Performance of TriggEye](https://scrapbox.io/smart-home/TriggEye%E3%81%AE%E6%80%A7%E8%83%BD%E8%A9%95%E4%BE%A1))
 - Light Weight: Runs on a low-end computer with a regular webcam. ([System Requirements](https://scrapbox.io/smart-home/TriggEye%E3%81%AE%E6%9D%90%E6%96%99%E8%B2%BB))
 - Secure: No internet connection required, so you don't have to worry about video leaking from your webcam.
 
