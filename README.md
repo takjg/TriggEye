@@ -2,7 +2,8 @@
 
 When looking at the webcam, [TriggEye](https://github.com/takjg/TriggEye) executes the given command.
 ![Overview](https://user-images.githubusercontent.com/34579033/63515725-755d7900-c526-11e9-9a2e-9c0453d8899d.png)
-    
+![Example](https://user-images.githubusercontent.com/34579033/63647905-ed17e780-c762-11e9-91fb-65433bc5499d.png)    
+
 - Usage: `triggeye COMMAND_TO_BE_EXECUTED_WHEN_LOOKING_AT_THE_WEBCAM`
 - Example: `triggeye say OK Google`
 - Supported OS: Windows10, Mac, Linux
@@ -62,7 +63,7 @@ When failed:
 
 ## Example
 
-[Wake up a smart speaker without a wake word](https://scrapbox.io/smart-home/%E8%A6%8B%E3%81%A4%E3%82%81%E3%82%8B%E3%81%A0%E3%81%91%E3%81%A7%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%82%B9%E3%83%94%E3%83%BC%E3%82%AB%E3%83%BC%E3%82%92%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95)
+[Wake up a smart speaker without a wake word](https://qiita.com/takjg/items/afc6348ceed67868d41f)
 
 - Mac
   ```
@@ -75,7 +76,7 @@ When failed:
 - Linux
   - See [How to play audio files on the command line](https://scrapbox.io/smart-home/%E9%9F%B3%E5%A3%B0%E3%81%AE%E5%86%8D%E7%94%9F%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89)
 
-The sample audio files [ok_google.wav](https://raw.githubusercontent.com/takjg/TriggEye/master/ok_google.wav) and [alexa.wav](https://raw.githubusercontent.com/takjg/TriggEye/master/alexa.wav) were created by [Open JTalk](http://open-jtalk.sp.nitech.ac.jp/index.php).
+The sample audio files [ok_google.wav](https://github.com/takjg/TriggEye/blob/master/ok_google.wav) and [alexa.wav](https://github.com/takjg/TriggEye/blob/master/alexa.wav) were created by [Open JTalk](http://open-jtalk.sp.nitech.ac.jp/index.php).
 
 ## Mechanism and implementation
 
