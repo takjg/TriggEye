@@ -1,6 +1,6 @@
 # TriggEye
 
-When looking at the webcam, [TriggEye](https://github.com/takjg/TriggEye) executes the given command.
+When looking at the webcam, [TriggEye](https://github.com/takjg/TriggEye) executes the specified command.
 ![Overview](https://user-images.githubusercontent.com/34579033/63515725-755d7900-c526-11e9-9a2e-9c0453d8899d.png)
 ![Example](https://user-images.githubusercontent.com/34579033/63647905-ed17e780-c762-11e9-91fb-65433bc5499d.png)    
 
@@ -14,7 +14,7 @@ When looking at the webcam, [TriggEye](https://github.com/takjg/TriggEye) execut
 - Light Weight: Runs on a low-end computer with a regular webcam. ([System Requirements](https://scrapbox.io/smart-home/TriggEye%E3%81%AE%E6%9D%90%E6%96%99%E8%B2%BB))
 - Secure: No internet connection required, so you don't have to worry about video leaking from your webcam.
 
-## Installation 
+## Installation
 
 ### Prerequisites (Only for Windows10)
 
@@ -85,5 +85,7 @@ See [Mechanism and implementation of TriggEye](https://scrapbox.io/smart-home/Tr
 ## License
 
 Released under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
+
+You have to respect OpenFace, dlib, OpenBLAS, and OpenCV licenses.
 
 Copyright (c) 2019 Tak Jaga
