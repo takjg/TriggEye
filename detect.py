@@ -39,7 +39,7 @@ def detect(idx, row, interval, margin):
         now = perf_counter()
         if now - last > interval:
             frame = get(idx, row, 'frame')
-            print(f'{frame} {d0} {d1}', flush=True)
+            print('{} {} {}'.format(frame, d0, d1), flush=True)
         last = now
 
 def diff(idx, row, lr):
@@ -52,7 +52,7 @@ def diff(idx, row, lr):
 # cf. https://github.com/TadasBaltrusaitis/OpenFace/wiki/Output-Format
 def gaze(idx, row, lr):
     def g(c):
-        return float(get(idx, row, f'gaze_{lr}_{c}'))
+        return float(get(idx, row, 'gaze_{}_{}'.format(lr, c)))
     return (g('x'), g('y'), g('z'))
 
 def eye(idx, row, lr):
@@ -60,7 +60,7 @@ def eye(idx, row, lr):
     def e(c):
         sum = 0
         for j in range(i, i + 8):
-            sum += float(get(idx, row, f'eye_lmk_{c}_{j}'))
+            sum += float(get(idx, row, 'eye_lmk_{}_{}'.format(c, j)))
         return sum / 8
     return (e('X'), e('Y'), e('Z'))
 
